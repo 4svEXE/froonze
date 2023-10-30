@@ -1,0 +1,65 @@
+.main-button {
+  padding: 8px 16px;
+
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--button, 8px);
+
+  border-radius: var(--button, 8px);
+  background: #7421fe;
+
+  color: var(--color-main-color-white, #fff);
+  /* Sm/16px/Medium */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  transition: 0.3s;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+
+    .icon {
+      transform: translate(4px);
+    }
+
+    &::before {
+      animation: shine 1.5s ease-out infinite;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+<header class="w-full lg:px-20 my-5 px-10">
+  <a href=""><img src="assets/img/shared/Logo.png" alt="Froonze logo" /></a>
+
+  <ul class="navbar hidden md:inline" [class.mobile]="isOpenMenu">
+    <li><a href="" class="hover-effect">Pricing</a></li>
+    <li><a href="" class="hover-effect">Affiliates</a></li>
+    <li><a href="" class="hover-effect">Blog</a></li>
+    <li><a href="" class="hover-effect">Demo Store</a></li>
+    <li><a href="" class="hover-effect">Contact</a></li>
+  </ul>
+
+  <app-main-button [label]="'Get started'" [customClass]="'my-custom-class'" />
+
+  <label class="burger md:hidden block" for="burger">
+    <input type="checkbox" id="burger" (change)="onCheckboxChange($event)" />
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+</header>
